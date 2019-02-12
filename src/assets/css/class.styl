@@ -1,0 +1,22 @@
+hairline-common(direction, color)
+  content ''
+  position absolute
+  z-index 2
+  background-color color
+  transform-origin 100% 50%
+  if direction == top
+    transform scaleY(0.5) translateY(-100%)
+    @media (min-resolution: 3dppx)
+      transform scaleY(0.33) translateY(-100%)
+  else if direction == bottom
+    transform scaleY(0.5) translateY(100%)
+    @media (min-resolution: 3dppx)
+      transform scaleY(0.33) translateY(100%)
+  else if direction == left
+    transform scaleX(0.5) translateX(-100%)
+    @media (min-resolution: 3dppx)
+      transform scaleX(0.33) translateX(-100%)
+  else if direction == right
+    transform scaleX(0.5) translateX(100%)
+    @media (min-resolution: 3dppx)
+      transform scaleX(0.33) translateX(100%)
