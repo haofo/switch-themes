@@ -9,13 +9,13 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x]
+        node-version: [14.x]
 
     steps:
     - uses: actions/checkout@v2
     - uses: pnpm/action-setup@v2.0.1
       with:
-        version: 6.20.3
+        version: 6.24.2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
@@ -23,7 +23,7 @@ jobs:
         cache: 'pnpm'
     - name: Install dependencies and build
       run: |
-        pnpm install
+        pnpm install --registry=https://registry.npmmirror.com/
         pnpm run build
       env:
         CI: true
