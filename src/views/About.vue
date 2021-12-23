@@ -26,10 +26,10 @@ export default {
   },
   methods: {
     onInputKeydown (event) {
-      console.log(`[Mand Mobile InputItem keydown] ${event.keyCode}`)
+      // console.log(`[Mand Mobile InputItem keydown] ${event.keyCode}`)
     },
     onInputChange (name, value) {
-      console.log(`[Mand Mobile InputItem change] ${value}`)
+      // console.log(`[Mand Mobile InputItem change] ${value}`)
     },
     onClick () {
       Toast({
